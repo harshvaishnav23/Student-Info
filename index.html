@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.18/sweetalert2.min.css"
+        integrity="sha512-yX1R8uWi11xPfY7HDg7rkLL/9F1jq8Hyiz8qF4DV2nedX4IVl7ruR2+h3TFceHIcT5Oq7ooKi09UZbI39B7ylw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="bg-success text-center text-white">
+        <h1 class="m-0">CRUD Using Web Storages</h1>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <form id="stdForm">
+                    <div class="form-group">
+                        <label for="fname" class="font-weight-bold">First Name*</label>
+                        <input type="text"  required id="fname" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="fname" class="font-weight-bold">Last Name*</label>
+                        <input type="text" required id="lname" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="font-weight-bold">Email*</label>
+                        <input type="email" required id="email" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="contact" class="font-weight-bold">Contact*</label>
+                        <input type="number" required id="contact" class="form-control" />
+                    </div>
+                    <div class="form-group text-right">
+                        <button class="btn btn-primary" id="stdSubmitBtn" type="submit">ADD Student</button>
+                        <button class="btn btn-primary d-none" id="stdUpdateBtn" type="button">UPDATE</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <p class="alert alert-success" id="noStdData">No Student Record Found Yet !!!</p>
+                <div class="table-responsive d-none" id="stdTable">
+                    <table class="table table-bordered text-center">
+                        <thead class="bg-primary text-white">
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Contact</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stdInfoContainer">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.18/sweetalert2.all.min.js"
+        integrity="sha512-mDxZdt7RiIHE1Lu4T6XmSi+jJJO+uD0gTnm2f75pQhKphTdnAeHdEPomsgXWuCnSt3rEp9MOPpttFyhG8yo6vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
